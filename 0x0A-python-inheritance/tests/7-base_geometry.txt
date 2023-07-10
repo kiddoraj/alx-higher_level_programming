@@ -1,0 +1,27 @@
+import unittest
+
+class TestBaseGeometry(unittest.TestCase):
+    def test_area(self):
+        # Test case 1: Testing area() method raises an exception
+        geometry = BaseGeometry()
+        with self.assertRaises(Exception) as context:
+            geometry.area()
+        self.assertEqual(str(context.exception), "area() is not implemented")
+
+    def test_integer_validator(self):
+        # Test case 1: Validating a positive integer value
+        geometry = BaseGeometry()
+        geometry.integer_validator("test", 5)  # No exception should be raised
+
+        # Test case 2: Validating a non-integer value
+        with self.assertRaises(TypeError) as context:
+            geometry.integer_validator("test", "not_an_integer")
+        self.assertEqual(str(context.exception), "test must be an integer")
+
+        # Test case 3: Validating a non-positive value
+        with self.assertRaises(ValueError) as context:
+            geometry.integer_validator("test", 0)
+        self.assertEqual(str(context.exception), "test must be greater than 0")
+
+if __name__ == '__main__':
+    unittest.main()

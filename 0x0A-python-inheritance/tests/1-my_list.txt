@@ -1,0 +1,18 @@
+import unittest
+
+class TestMyList(unittest.TestCase):
+    def test_print_sorted(self):
+        # Test case 1: Sorting an empty list
+        my_list = MyList([])
+        self.assertEqual(my_list.print_sorted(), [])
+
+        # Test case 2: Sorting a list with one element
+        my_list = MyList([5])
+        self.assertEqual(my_list.print_sorted(), [5])
+
+        # Test case 3: Sorting a list with multiple elements
+        my_list = MyList([3, 1, 4, 2])
+        self.assertEqual(my_list.print_sorted(), [1, 2, 3, 4])
+
+if __name__ == '__main__':
+    unittest.main()
