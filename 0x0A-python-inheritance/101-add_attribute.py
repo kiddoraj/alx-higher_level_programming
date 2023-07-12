@@ -1,7 +1,7 @@
 #!/usr/bin/python3
+"""adds a new attribute to an object if it’s possible"""
 def add_attribute(obj, attr, value):
     """
-    Adds a new attribute to an object if possible.
 
     Args:
         obj: The object to add the attribute to.
