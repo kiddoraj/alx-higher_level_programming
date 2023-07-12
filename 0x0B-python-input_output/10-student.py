@@ -1,7 +1,8 @@
 #!/usr/bin/python3
+""" Module that defines the class Student"""
 class Student:
     """
-    Class representing a student.
+    Class to create instances9student)
     """
 
     def __init__(self, first_name, last_name, age):
