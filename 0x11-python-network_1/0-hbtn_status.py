@@ -1,14 +1,12 @@
 #!/usr/bin/python3
 # Script to featch data from a webpage
-import urllib.request
 
-url = "https://alx-intranet.hbtn.io/status"
+if __name__ == '__main__':
+    import urllib.request
 
-try:
-    with urllib.request.urlopen(url) as response:
-        data = response.read()
+    with urllib.request.urlopen('https://alx-intranet.hbtn.io/status') as res:
+        content = res.read()
         print("Body response:")
-        print("\t- type:", type(data))
-        print("\t- content:", data.decode('utf-8'))
-except Exceptions as e:
-      print(e)
+        print("\t- type: {}".format(type(content)))
+        print("\t- content: {}".format(content))
+        print("\t- utf8 content: {}".format(content.decode('utf-8')))

@@ -3,24 +3,9 @@
 import requests
 import sys
 
-# Check if URL and email arguments are provided
-if len(sys.argv) != 3:
-    print("Usage: python script.py <URL> <email>")
-    sys.exit(1)
+if __name__ == "__main__":
+    url = sys.argv[1]
+    value = {"email": sys.argv[2]}
 
-url = sys.argv[1]
-email = sys.argv[2]
-
-# Create a dictionary with the email as a parameter
-data = {'email': email}
-
-try:
-    response = requests.post(url, data=data)
-    response.raise_for_status()  # Raise an exception for HTTP errors
-
-    # Display the body of the response
-    print("Response body:")
-    print(response.text)
-
-except requests.exceptions.RequestException as e:
-    print("Error:", e)
+    r = requests.post(url, data=value)
+    print(r.text)
