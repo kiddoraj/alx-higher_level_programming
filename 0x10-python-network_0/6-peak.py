@@ -2,18 +2,8 @@
 """ Finds the peak in a list """
 def find_peak(list_of_integers):
     """
-    Find a peak in a list of unsorted integers.
-
-    Args:
-    list_of_integers (list): The list of unsorted integers.
-
-    Returns:
-    int: A peak element from the list.
-
-    Complexity:
-    O(log(n))
+    Find a peak in a list of unsorted 
     """
-
     def binary_search_peak(arr, left, right):
         if left == right:
             return arr[left]
