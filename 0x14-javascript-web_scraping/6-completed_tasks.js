@@ -30,7 +30,7 @@ request(apiUrl, (error, response, body) => {
 
       // Print users with completed tasks
       completedTasksByUser.forEach((count, userId) => {
-        console.log(`User ID ${userId} has completed ${count} task(s).`);
+        console.log(`${userId}: ${count},`);
       });
     } catch (parseError) {
       console.error('Error parsing JSON response:', parseError);

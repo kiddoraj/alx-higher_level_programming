@@ -20,7 +20,7 @@ request(apiUrl, (error, response, body) => {
       const movieData = JSON.parse(body);
       const characterUrls = movieData.characters;
 
-      function printCharacter(index) {
+      function printCharacter (index) {
         if (index < characterUrls.length) {
           const characterUrl = characterUrls[index];
           request(characterUrl, (charError, charResponse, charBody) => {

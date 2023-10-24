@@ -27,7 +27,7 @@ request(apiUrl, (error, response, body) => {
         }
       });
 
-      console.log(`Number of movies where Wedge Antilles appears: ${count}`);
+      console.log(`${count}`);
     } catch (parseError) {
       console.error('Error parsing JSON response:', parseError);
     }
